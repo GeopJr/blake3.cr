@@ -2,6 +2,8 @@ require "digest"
 require "semantic_version"
 
 class Digest::Blake3 < ::Digest
+  extend ClassMethods
+
   @[Link(ldflags: "-L#{__DIR__}/../../blake3c -lblake3")]
   lib Lib
     fun version = blake3_version : LibC::UChar*
