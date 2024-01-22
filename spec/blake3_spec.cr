@@ -1,5 +1,5 @@
 require "./spec_helper"
-require "../src/digest/blake3"
+require "../src/blake3"
 require "json"
 
 class TestVectors

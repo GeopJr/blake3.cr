@@ -1,5 +1,5 @@
 name: blake3
-version: 1.2.0
+version: 1.3.0
 authors:
 - Didactic Drunk <1479616+didactic-drunk@users.noreply.github.com>
 - GeopJr <evan@geopjr.dev>
@@ -8,5 +8,3 @@ targets:
     main: examples/blake3_hash.cr
 crystal: ">= 1.0.0"
 license: MIT
-scripts:
-  postinstall: "cd blake3c && make -f ../build/Makefile && cd .."
