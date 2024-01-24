@@ -2,7 +2,6 @@ require "digest"
 require "semantic_version"
 
 class Digest::Blake3 < ::Digest
-  {{ Digest.has_constant?(:Base) ? "::Base" : "" }} # Crystal < 0.36 compatible
   @[Link(ldflags: "-L#{__DIR__}/../../blake3c -lblake3")]
   lib Lib
     fun version = blake3_version : LibC::UChar*
