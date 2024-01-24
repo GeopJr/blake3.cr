@@ -6,7 +6,7 @@ arch_defaults = {
   neon:   {{ env("BLAKE3_NO_NEON") == "0" || env("BLAKE3_USE_NEON") == "1" || nil }},
 }
 
-{% if env("BLAKE3_CR_OVERRIDE_DEFAULTS") == "1" %}
+{% if env("BLAKE3_CR_OVERRIDE_DEFAULTS") != "1" %}
     {% if flag?(:aarch64) %}
         arch_defaults = {
             sse2: false,
