@@ -1,8 +1,8 @@
 require "digest"
 require "semantic_version"
 
-class Digest::Blake3 < ::Digest{{ Digest.has_constant?(:Base) ? "::Base" : "" }} # Crystal < 0.36 compatible
-  {% if Digest.has_constant?(:ClassMethods) %} extend ClassMethods {% end %}
+class Digest::Blake3 < ::Digest
+  extend ClassMethods
 
   @[Link(ldflags: "-L#{__DIR__}/../../blake3c -lblake3")]
   lib Lib
